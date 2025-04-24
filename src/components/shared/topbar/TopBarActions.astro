@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+const topBarActions = [
+  {
+    icon: 'phone-solid',
+    href: '#',
+    title: '+ 1(23)456789',
+  },
+  {
+    icon: 'map-pin-solid',
+    href: '#',
+    title: 'Lorem Ipsum',
+  },
+];
+---
+
+<ul class="flex items-center gap-x-5 justify-self-start">
+  {
+    topBarActions.map((action) => (
+      <li>
+        <a class="flex items-center gap-x-1" href="#">
+          <Icon name={'heroicons:' + action.icon} class="size-3" />
+          <span class="text-white/50 transition-colors hover:text-white">{action.title}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

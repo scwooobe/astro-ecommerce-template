@@ -1,0 +1,14 @@
+---
+import TopBarLinks from './TopBarLinks.astro';
+import TopBarActions from './TopBarActions.astro';
+import TopBarPromo from './TopBarPromo.astro';
+---
+
+<nav
+  class="hidden grid-cols-3 items-center justify-center bg-slate-950 px-6 py-3 text-xs text-white md:grid"
+  aria-label="Utility navigation"
+>
+  <TopBarActions />
+  <TopBarPromo />
+  <TopBarLinks />
+</nav>
