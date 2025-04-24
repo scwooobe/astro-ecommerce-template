@@ -2,6 +2,9 @@
 
 A modern, responsive eCommerce frontend template built with [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and Vanilla JS.
 
+> 🚧 **This project is a Work in Progress.**  
+> It's under active development — structure, features, and components may change.
+
 ## 🚀 Features
 
 - ⚡️ Super fast Astro framework
