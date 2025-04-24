@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+const navActions = [
+  {
+    icon: 'magnifying-glass',
+  },
+  {
+    cart: true,
+    icon: 'shopping-bag',
+  },
+];
+---
+
+<ul class="flex items-center gap-x-5 justify-self-end sm:gap-x-6">
+  {
+    navActions.map((action) => (
+      <li class="flex items-center">
+        <button class:list={action.cart && 'relative'} type="button">
+          {action.cart && (
+            <span
+              class:list={
+                'absolute top-0 left-1/2 flex size-5 -translate-y-1.5 items-center justify-center rounded-full border-2 border-white bg-black text-[10px] text-white'
+              }
+            >
+              1
+            </span>
+          )}
+          <Icon name={'heroicons:' + action.icon} class="size-6" />
+        </button>
+      </li>
+    ))
+  }
+</ul>

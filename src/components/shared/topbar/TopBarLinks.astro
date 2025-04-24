@@ -1,0 +1,32 @@
+---
+const topBarLinks = [
+  {
+    title: 'Lorem',
+    url: '#',
+  },
+  {
+    title: 'Ipsum',
+    url: '#',
+  },
+  {
+    title: 'Aliquid',
+    url: '#',
+  },
+  {
+    title: 'Dolor',
+    url: '#',
+  },
+];
+---
+
+<ul class="flex items-center gap-x-6 justify-self-end">
+  {
+    topBarLinks.map((link) => (
+      <li>
+        <a class="text-white/50 transition-colors hover:text-white" href={link.url}>
+          {link.title}
+        </a>
+      </li>
+    ))
+  }
+</ul>

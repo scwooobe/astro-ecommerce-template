@@ -1,9 +1,19 @@
 ---
 import { Icon } from 'astro-icon/components';
+import NavLinks from './NavLinks.astro';
+import NavActions from './NavActions.astro';
 ---
 
-<nav>
-  <a href="#">
-    <Icon name="logo" class="size-8" />
+<nav class="grid grid-cols-3 items-center justify-center px-6 py-3 md:py-4" id="nav" aria-label="Main navigation">
+  <button class="justify-self-start md:hidden" type="button">
+    <Icon name="heroicons:bars-2" class="size-6" />
+  </button>
+
+  <NavLinks />
+
+  <a class="justify-self-center" href="#">
+    <Icon name="logo" class="size-6 text-slate-300 sm:size-8" />
   </a>
+
+  <NavActions />
 </nav>

@@ -1,0 +1,32 @@
+---
+const navLinks = [
+  {
+    title: 'Expedita',
+    href: '#',
+  },
+  {
+    title: 'Lorem',
+    href: '#',
+  },
+  {
+    title: 'Ipsum',
+    href: '#',
+  },
+  {
+    title: 'Aliquid',
+    href: '#',
+  },
+];
+---
+
+<ul class="hidden gap-x-8 justify-self-start text-sm md:flex">
+  {
+    navLinks.map((link) => (
+      <li>
+        <a class="font-medium" href={link.href}>
+          {link.title}
+        </a>
+      </li>
+    ))
+  }
+</ul>
