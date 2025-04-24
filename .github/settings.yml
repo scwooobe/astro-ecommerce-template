@@ -1,0 +1,45 @@
+# .github/settings.yml
+
+repository:
+  name: astro-ecommerce-template
+  description: 'Modular Astro + Tailwind ecommerce template with flexible layout architecture and Git flow'
+  homepage: https://scwooobe.github.io/astro-ecommerce-template
+  topics: astro, tailwindcss, ecommerce, template, jamstack, typescript
+  default_branch: main
+  private: false
+  has_issues: true
+  has_wiki: false
+  has_projects: false
+  allow_merge_commit: false
+  allow_squash_merge: true
+  allow_rebase_merge: false
+  delete_branch_on_merge: true
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        strict: true
+        contexts:
+          - PR Checks
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+      enforce_admins: true
+      required_linear_history: true
+      restrictions: null
+      allow_force_pushes: false
+      allow_deletions: false
+
+  - name: develop
+    protection:
+      required_status_checks:
+        strict: true
+        contexts:
+          - PR Checks
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+      enforce_admins: true
+      required_linear_history: true
+      restrictions: null
+      allow_force_pushes: false
+      allow_deletions: false
