@@ -1,1 +1,44 @@
 @import 'tailwindcss';
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(12.9% 0.042 264.695);
+  --muted: oklch(27.9% 0.041 260.031);
+  --muted-foreground: oklch(70.4% 0.04 256.788);
+  --primary: oklch(12.9% 0.042 264.695);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(96.8% 0.007 247.896);
+  --secondary-foreground: oklch(12.9% 0.042 264.695);
+  --accent: oklch(0.9 0.185667 97.8573);
+  --accent-foreground: oklch(12.9% 0.042 264.695);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Utility class to lock colors and ignore dark mode changes */
+  .theme-fixed-dark {
+    --background: oklch(12.9% 0.042 264.695);
+    --foreground: oklch(1 0 0);
+  }
+}
