@@ -1,5 +1,162 @@
 ---
+import FooterColumn from './FooterColumn.astro';
 
+const columns = [
+  {
+    title: 'Contacts',
+    class: 'lg:col-span-2',
+    links: [
+      {
+        href: '#',
+        icon: 'phone',
+        target: null,
+        text: '+1 (23) 456 7890',
+      },
+      {
+        href: '#',
+        icon: 'at-symbol',
+        target: null,
+        text: 'email@email.com',
+      },
+      {
+        href: '#',
+        icon: 'map-pin',
+        target: '_blank',
+        text: 'Lorem ipsum dolor et sum',
+      },
+    ],
+  },
+  {
+    title: 'Shop by',
+    class: null,
+    links: [
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Dolor et sum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Utem vero',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+    ],
+  },
+  {
+    title: 'Support',
+    class: null,
+    links: [
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Dolor et sum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Utem vero',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+    ],
+  },
+  {
+    title: 'Services',
+    class: null,
+    links: [
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Dolor et sum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Utem vero',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+    ],
+  },
+  {
+    title: 'About',
+    class: null,
+    links: [
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Dolor et sum',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Utem vero',
+      },
+      {
+        href: '#',
+        icon: null,
+        target: null,
+        text: 'Lorem ipsum',
+      },
+    ],
+  },
+];
 ---
 
-<footer></footer>
+<footer class="bg-secondary">
+  <div class="mx-auto px-6 sm:container">
+    <div class="grid gap-y-8 py-12 lg:grid-cols-6">
+      {
+        columns.map((column) => (
+          <FooterColumn title={column.title} links={column.links} class={column.class ?? undefined} />
+        ))
+      }
+    </div>
+  </div>
+</footer>

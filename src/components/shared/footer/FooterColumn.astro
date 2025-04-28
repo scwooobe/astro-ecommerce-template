@@ -1,0 +1,35 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Link {
+  href: string;
+  icon?: string | null;
+  target?: string | null;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  links: Link[];
+  class?: string;
+}
+
+const { title, links, class: classList }: Props = Astro.props;
+---
+
+<!-- TODO: Replace with accordion on mobile? -->
+<div class={classList ?? ''}>
+  <span class="mb-5 block text-sm font-bold">{title}</span>
+  <ul class="grid gap-y-3 text-sm">
+    {
+      links.map((link) => (
+        <li>
+          <a class="group flex items-center gap-x-1" href={link.href} target={link.target ?? '_self'}>
+            {link.icon && <Icon name={'heroicons:' + link.icon} class="mr-1.5 size-3.5" />}
+            <span class="opacity-60 transition-colors group-hover:opacity-100">{link.text}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
